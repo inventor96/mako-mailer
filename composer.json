@@ -1,0 +1,24 @@
+{
+    "name": "inventor96/mako-mailer",
+    "type": "library",
+    "description": "A simple emailing package for the PHP Mako framework.",
+    "keywords": ["mako", "email", "mailer"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Caleb Hornbeck",
+            "homepage": "https://github.com/inventor96",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "inventor96\\MakoMailer\\": "src"
+        }
+    },
+    "require": {
+        "php": "~8.1.0|~8.2.0|~8.3.0",
+        "mako/framework": "^10.0",
+        "phpmailer/phpmailer": "^7.0"
+    }
+}
