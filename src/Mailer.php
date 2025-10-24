@@ -26,8 +26,8 @@ class Mailer {
 			$recipients,
 			[ 'text/html' => $html_body ],
 			$from ?? new EmailUser(
-				$this->config->get('email.from_email'),
-				$this->config->get('email.from_name'),
+				$this->config->get('mailer::email.from_email'),
+				$this->config->get('mailer::email.from_name'),
 			),
 		);
 		return $this->sender->send($envelope);
