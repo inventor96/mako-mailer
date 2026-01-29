@@ -13,10 +13,10 @@ class PHPMailerAdapter implements EmailSenderInterface {
 		// create mailer template
 		$conf = $config->get('mailer::email');
 		$this->mailer_template = new PHPMailer(true);
-		if ($conf['use_mail'] ?? false) {
-			$this->mailer_template->isMail();
-		} else {
+		if ($conf['use_smtp'] ?? false) {
 			$this->mailer_template->isSMTP();
+		} else {
+			$this->mailer_template->isMail();
 		}
 
 		// set whitelisted settings
