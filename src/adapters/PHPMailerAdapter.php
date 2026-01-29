@@ -11,7 +11,7 @@ class PHPMailerAdapter implements EmailSenderInterface {
 
 	public function __construct(Config $config) {
 		// create mailer template
-		$conf = $config->get('email');
+		$conf = $config->get('mailer::email');
 		$this->mailer_template = new PHPMailer(true);
 		if ($conf['use_mail'] ?? false) {
 			$this->mailer_template->isMail();
