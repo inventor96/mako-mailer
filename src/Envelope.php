@@ -26,7 +26,7 @@ class Envelope {
 	 *
 	 * @return EmailUser
 	 */
-	public function getFrom(): EmailUser {
+	public function getFrom(): ?EmailUser {
 		return $this->from;
 	}
 
